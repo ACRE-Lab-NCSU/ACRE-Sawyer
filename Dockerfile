@@ -68,3 +68,11 @@ RUN cd /ros_ws/src \
         && wstool update \
         && cd /ros_ws \
         && . /opt/ros/noetic/setup.sh && catkin_make
+
+RUN cd /ros_ws/src \
+        && git clone https://github.com/RethinkRobotics/sawyer_simulator.git -b noetic_devel \
+        && git clone https://github.com/RethinkRobotics-opensource/sns_ik.git -b melodic-devel \
+        && wstool init . \
+        && wstool merge sawyer_simulator/sawyer_simulator.rosinstall \
+        && wstool update \
+        && . /opt/ros/noetic/setup.sh && catkin_make
