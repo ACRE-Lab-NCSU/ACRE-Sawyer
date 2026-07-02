@@ -30,6 +30,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-noetic-dynamic-reconfigure \
     ros-noetic-trajectory-msgs \
     ros-noetic-rospy-message-converter \
+    gazebo11 \
+    ros-noetic-gazebo-ros  \
+    ros-noetic-gazebo-ros-control \
+    ros-noetic-gazebo-ros-pkgs \
+    ros-noetic-ros-control \
+    ros-noetic-control-toolbox \
+    ros-noetic-realtime-tools \ 
+    ros-noetic-ros-controllers \
+    ros-noetic-tf-conversions \
+    ros-noetic-kdl-parser \
   && rm -rf /var/lib/apt/lists/*
 
 
